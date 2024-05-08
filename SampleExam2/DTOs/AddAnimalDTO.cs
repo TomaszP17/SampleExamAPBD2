@@ -7,4 +7,5 @@ public record AddAnimalDTO(
     DateTime AdmissionDate,
     int OwnerId
     //tutaj jakos liste tych wszystkich procedur
+    
     );
