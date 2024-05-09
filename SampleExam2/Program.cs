@@ -1,4 +1,6 @@
+using FluentValidation;
 using SampleExam2.Services;
+using SampleExam2.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IDbService, DbService>();
 builder.Services.AddSwaggerGen();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateAnimalValidator>();
 
 var app = builder.Build();
 

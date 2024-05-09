@@ -6,5 +6,5 @@ public record GetAnimalDto(
         string Type,
         DateTime AdmissionDate,
         GetOwner ChOwner,
-        GetProcedure Procedure
+        List<GetProcedure?> Procedures
     );
